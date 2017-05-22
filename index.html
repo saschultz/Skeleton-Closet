@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/journal.js"></script>
+    <script type="text/javascript" src="js/journal-interface.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
+    <title>The Skeletons in my Closet</title>
+  </head>
+  <body>
+    <h1>The Skeletons in my Closet</h1>
+    <form id="skeletons">
+      <label for="title">Enter a Title for your journal</label>
+      <input type="text" name="title" id="title">
+      <label for="body">Enter your Skeleton</label>
+      <input type="text" name="body" id="body">
+      <button type="submit">Hide in Closet</button>
+    </form>
+    <div class="journal">
+      <h2 id="header"></h2>
+      <p id="content"></p>
+      <p id="word-count"></p>
+    </div>
+  </body>
+</html>
