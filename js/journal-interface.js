@@ -8,6 +8,7 @@ $(document).ready(function(){
     var newJournal = new Journal(title, body);
     $('#header').text(title);
     $('#content').text(body);
-    $('#word-count').text('Word count: ' + newJournal.wordCount(body));
+    var wordCount = newJournal.wordCount(body)
+    $('#word-count').text('Word count: ' + wordCount);
   });
 });

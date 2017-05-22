@@ -1,11 +1,11 @@
 function Journal(title, body) {
-  this.title = title;
-  this.body = body;
+  this.header = title;
+  this.contents = body;
 }
 
 Journal.prototype.wordCount = function(body) {
-  var splitBody = body.split(' ');
-  return splitBody.length();
+  var wordCount = body.split(' ');
+  return wordCount.length;
 };
 
 exports.journalModule = Journal;
