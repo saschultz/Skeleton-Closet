@@ -12,4 +12,8 @@ Journal.prototype.vowelCount = function (body) {
   return body.replace(/[^aeiouy]/gi, "").length;
 };
 
+Journal.prototype.consonantCount = function (body) {
+  return body.replace(/[aeiouy\s\W]/gi, "").length;
+};
+
 exports.journalModule = Journal;

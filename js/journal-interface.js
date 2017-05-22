@@ -10,7 +10,9 @@ $(document).ready(function(){
     $('#content').text(body);
     var wordCount = newJournal.wordCount(body)
     var vowelCount = newJournal.vowelCount(body)
+    var consonantCount = newJournal.consonantCount(body)
     $('#word-count').text('Word count: ' + wordCount);
     $('#vowel-count').text('Vowel count: ' + vowelCount);
+    $('#consonant-count').text('Consonant count: ' + consonantCount);
   });
 });
