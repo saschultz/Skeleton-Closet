@@ -9,6 +9,24 @@ Journal.prototype.wordCount = function(body) {
   return wordCount.length;
 };
 
+Journal.prototype.vowelCount = function (body) {
+  // var bodyArray = body.split('');
+  // var vowels = [];
+  // var length = bodyArray.length;
+  // debugger;
+  // for (var index = 0; index <= length; index++) {
+  //   console.log(bodyArray[index]);
+  //   if (bodyArray[index].match(/[aeiouy+]/gi)) {
+  //     console.log(bodyArray[index]);
+  //     vowels.push(bodyArray[index]);
+  //   } else {
+  //     return "Are you sure these are English words?"
+  //   }
+  // }
+  // return vowels.length;
+  return body.replace(/[^aeiouy]/gi, "").length;
+};
+
 exports.journalModule = Journal;
 
 },{}],2:[function(require,module,exports){
@@ -23,7 +41,9 @@ $(document).ready(function(){
     $('#header').text(title);
     $('#content').text(body);
     var wordCount = newJournal.wordCount(body)
+    var vowelCount = newJournal.vowelCount(body)
     $('#word-count').text('Word count: ' + wordCount);
+    $('#vowel-count').text('Vowel count: ' + vowelCount);
   });
 });
 

@@ -8,4 +8,8 @@ Journal.prototype.wordCount = function(body) {
   return wordCount.length;
 };
 
+Journal.prototype.vowelCount = function (body) {
+  return body.replace(/[^aeiouy]/gi, "").length;
+};
+
 exports.journalModule = Journal;
